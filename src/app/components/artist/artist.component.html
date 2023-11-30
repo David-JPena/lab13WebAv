@@ -1,0 +1,19 @@
+<h1 class="animated fadeIn fast"> {{ artist.nombre | uppercase }} <small>({{ artist.aparicion | date:'y' }})</small> </h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="artist.img" [alt]="artist.nombre" class="card-img-top img-fluid">
+        <a [routerLink]="['/artists']" class="btn btn-outline-danger btn-block mt-1">Atrás</a>
+    </div>
+    <div class="col-md-8">
+        <h2> {{ artist.nombre }} </h2>
+        <hr>
+        <p>
+             {{ artist.biografia }} 
+        </p>
+        <div>
+            <span *ngIf="artist.idioma == 'Español'" class="badge badge-success p-2"> {{ artist.idioma }} </span>
+            <span *ngIf="artist.idioma == 'Inglés'" class="badge badge-primary p-2"> {{ artist.idioma }} </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="card animated fedeIn fast" >
+    <!-- <img src="../../../assets/img/ac-dc.jpg" class="card-img-top img-fluid" alt="..."> -->
+    <!-- <img src="assets/img/ac-dc.jpg" class="card-img-top img-fluid" alt="..."> -->
+    <!-- <img src="{{ artista.img }}" class="card-img-top img-fluid" alt="{{ artista.nombre }}"> -->
+
+
+    <img [src]="artista.img" class="card-img-top img-fluid" [alt]="artista.nombre">
+    <div class="card-body">
+        <h5 class="card-title">   {{ artista.nombre }} </h5>
+        <p class="card-text">   {{ artista.biografia }} </p>
+        <p class="card-text"><small class="text-muted">   {{ artista.aparicion }} </small></p>
+
+        <a [routerLink]="['/artist', indice]" class="btn btn-outline-primary btn-block">Ver más...</a>
+    </div>
+</div>

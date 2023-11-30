@@ -1,0 +1,10 @@
+<h1>Artistas <small>Rock</small></h1>
+
+<div class="card-columns mt-5">
+    <!-- <app-artista-tarjeta   *ngFor="let artist of artists; let i = index"></app-artista-tarjeta> -->
+    <!-- <app-artista-tarjeta (artistSelected)="verArtist( $event )" [artist]="artist" [i]="i" *ngFor="let artist of artists; let i = index"></app-artista-tarjeta> -->
+    
+
+    <app-artista-tarjeta (artistSelected)="verArtist( $event )" [artista]="artist" [indice]="i" *ngFor="let artist of artists; let i = index"></app-artista-tarjeta>
+
+</div>
